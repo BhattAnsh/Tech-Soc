@@ -77,16 +77,24 @@ export default function Home() {
             </p>
             
             <div className="flex gap-4 mt-12">
-              <MovingBorder
-                className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 hover:scale-105 transition-transform"
-              >
-                Join Tech Soc
-              </MovingBorder>
-              <MovingBorder
-                className="bg-black dark:bg-slate-900 text-white border-neutral-200 dark:border-slate-800 hover:scale-105 transition-transform"
-              >
-                View Events
-              </MovingBorder>
+              <a href="/join" className="block">
+                <MovingBorder
+                  className="rounded-full bg-gradient-to-r from-blue-500 to-violet-500 text-white border-blue-500/20 hover:border-blue-500/50 hover:scale-105 transition-all duration-300"
+                >
+                  <span className="px-8 py-4 inline-block font-semibold">
+                    Join Tech Soc
+                  </span>
+                </MovingBorder>
+              </a>
+              <a href="/events" className="block">
+                <MovingBorder
+                  className="rounded-full bg-gray-900 text-white border-gray-800 hover:border-gray-700 hover:bg-gray-800 hover:scale-105 transition-all duration-300"
+                >
+                  <span className="px-8 py-4 inline-block font-semibold">
+                    View Events
+                  </span>
+                </MovingBorder>
+              </a>
             </div>
           </div>
 
