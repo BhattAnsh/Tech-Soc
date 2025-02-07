@@ -20,10 +20,10 @@ export function EventsContent() {
     "time": "11:30 AM",
     "location": "Microsoft Office, Gurugram",
     "category": "Tech Event",
-    "status": "Completed",
+    "status": "Past",
     "speakers": ["Ankit Raj", "Anuhya"],
     "total_participants": 350,
-    "image": './stellar.JPG'
+    "image": "stellar.JPG"
   },
   {
     "id": 2,
@@ -33,10 +33,10 @@ export function EventsContent() {
     "time": "All Day",
     "location": "Innov8 DLF Cyber Green Tower C, Gurugram",
     "category": "Hackathon",
-    "status": "Completed",
+    "status": "Past",
     "total_participants": 150,
     "prize_pool": "$10,000",
-    "image": "./neox.JPG"
+    "image": "neox.JPG"
   },
   {
     "id": 3,
@@ -46,9 +46,9 @@ export function EventsContent() {
     "time": "11:30 AM",
     "location": "Microsoft KP2 Office, Noida",
     "category": "Tech Meetup",
-    "status": "Completed",
+    "status": "Past",
     "total_participants": 150,
-    "image": "./coredao.JPG"
+    "image": "coredao.JPG"
   },
   {
     "id": 4,
@@ -58,12 +58,12 @@ export function EventsContent() {
     "time": "All Day",
     "location": "Innov8 Coworking Aerocity, Delhi",
     "category": "Hackathon",
-    "status": "Completed",
+    "status": "Past",
     "total_participants": 140,
     "highlighted_project": "NFTerna",
-    "image": "./educhain.JPG"
+    "image": "educhain.JPG"
   }
-];
+]
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString), 'MMM dd, yyyy');
