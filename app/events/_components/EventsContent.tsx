@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Calendar, Clock, MapPin} from "lucide-react";
+// import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { format } from 'date-fns';
@@ -23,7 +23,7 @@ export function EventsContent() {
     "status": "Past",
     "speakers": ["Ankit Raj", "Anuhya"],
     "total_participants": 350,
-    "image": "stellar.JPG"
+    "image": ".stellar.JPG"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@ export function EventsContent() {
     "status": "Past",
     "total_participants": 150,
     "prize_pool": "$10,000",
-    "image": "neox.JPG"
+    "image": ".neox.JPG"
   },
   {
     "id": 3,
@@ -48,7 +48,7 @@ export function EventsContent() {
     "category": "Tech Meetup",
     "status": "Past",
     "total_participants": 150,
-    "image": "coredao.JPG"
+    "image": ".coredao.JPG"
   },
   {
     "id": 4,
@@ -61,7 +61,7 @@ export function EventsContent() {
     "status": "Past",
     "total_participants": 140,
     "highlighted_project": "NFTerna",
-    "image": "educhain.JPG"
+    "image": ".educhain.JPG"
   }
 ]
   const formatDate = (dateString: string) => {
@@ -163,7 +163,7 @@ export function EventsContent() {
                         </div>
                       </div>
 
-                      <div className="mt-6">
+                      {/* <div className="mt-6">
                         <Link
                           href={`/events/${event.id}`}
                           className="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition-colors group"
@@ -171,7 +171,7 @@ export function EventsContent() {
                           Learn More
                           <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
