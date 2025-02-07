@@ -16,25 +16,25 @@ export function GalleryContent() {
   const galleryImages = [
     [
       {
-        "src": ".stellar.JPG",
+        "src": "stellar.JPG",
         "alt": "Stellar Dev Yatra",
         "category": "Tech Event",
         "date": "July 2024"
       },
       {
-        "src": ".neox.JPG",
+        "src": "neox.JPG",
         "alt": "NEO X Grind Hackathon: Rise In Edition",
         "category": "Hackathon",
         "date": "September 2024"
       },
       {
-        "src": ".coredao.JPG",
+        "src": "coredao.JPG",
         "alt": "Core Commit Global Meetups - Delhi",
         "category": "Tech Meetup",
         "date": "November 2024"
       },
       {
-        "src": ".educhain.JPG",
+        "src": "educhain.JPG",
         "alt": "EduChain Build Station Hackathon",
         "category": "Hackathon",
         "date": "December 2024"

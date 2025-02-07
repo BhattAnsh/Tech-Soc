@@ -23,7 +23,7 @@ export function EventsContent() {
     "status": "Past",
     "speakers": ["Ankit Raj", "Anuhya"],
     "total_participants": 350,
-    "image": ".stellar.JPG"
+    "image": "stellar.JPG"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@ export function EventsContent() {
     "status": "Past",
     "total_participants": 150,
     "prize_pool": "$10,000",
-    "image": ".neox.JPG"
+    "image": "neox.JPG"
   },
   {
     "id": 3,
@@ -48,7 +48,7 @@ export function EventsContent() {
     "category": "Tech Meetup",
     "status": "Past",
     "total_participants": 150,
-    "image": ".coredao.JPG"
+    "image": "coredao.JPG"
   },
   {
     "id": 4,
@@ -61,7 +61,7 @@ export function EventsContent() {
     "status": "Past",
     "total_participants": 140,
     "highlighted_project": "NFTerna",
-    "image": ".educhain.JPG"
+    "image": "educhain.JPG"
   }
 ]
   const formatDate = (dateString: string) => {
