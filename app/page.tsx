@@ -1,6 +1,6 @@
 "use client";
 
-import { BackgroundBeams } from "@/components/ui/background-beams";
+
 import { MovingBorder } from "@/components/ui/moving-border";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { motion } from "framer-motion";

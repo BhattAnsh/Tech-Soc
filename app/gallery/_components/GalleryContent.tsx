@@ -14,67 +14,40 @@ export function GalleryContent() {
   const categories = ["All", "Hackathon", "Workshop", "Tech Talk", "Networking", "Social"];
 
   const galleryImages = [
-    {
-      src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
-      alt: "Hackathon 2024",
-      category: "Hackathon",
-      date: "March 2024"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80",
-      alt: "AI Workshop",
-      category: "Workshop",
-      date: "February 2024"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
-      alt: "Tech Talk: Future of AI",
-      category: "Tech Talk",
-      date: "January 2024"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=800&q=80",
-      alt: "Networking Night",
-      category: "Networking",
-      date: "December 2023"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-      alt: "Team Building Event",
-      category: "Social",
-      date: "November 2023"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80",
-      alt: "Python Workshop",
-      category: "Workshop",
-      date: "October 2023"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
-      alt: "Coding Competition",
-      category: "Hackathon",
-      date: "September 2023"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
-      alt: "Web Dev Bootcamp",
-      category: "Workshop",
-      date: "August 2023"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1528901166007-3784c7dd3653?auto=format&fit=crop&w=800&q=80",
-      alt: "Tech Meetup",
-      category: "Networking",
-      date: "July 2023"
-    }
+    [
+      {
+        "src": ".stellar.JPG",
+        "alt": "Stellar Dev Yatra",
+        "category": "Tech Event",
+        "date": "July 2024"
+      },
+      {
+        "src": ".neox.JPG",
+        "alt": "NEO X Grind Hackathon: Rise In Edition",
+        "category": "Hackathon",
+        "date": "September 2024"
+      },
+      {
+        "src": ".coredao.JPG",
+        "alt": "Core Commit Global Meetups - Delhi",
+        "category": "Tech Meetup",
+        "date": "November 2024"
+      },
+      {
+        "src": ".educhain.JPG",
+        "alt": "EduChain Build Station Hackathon",
+        "category": "Hackathon",
+        "date": "December 2024"
+      }
+    ]
   ];
 
   const handleImageLoad = (src: string) => {
     setLoadingImages(prev => ({ ...prev, [src]: false }));
   };
 
-  const filteredImages = galleryImages.filter(image => 
+  const flattenedImages = galleryImages.flatMap(images => images);
+  const filteredImages = flattenedImages.filter(image => 
     activeFilter === "All" ? true : image.category === activeFilter
   );
 
@@ -98,7 +71,7 @@ export function GalleryContent() {
                 }`}
               >
                 {category}
-                {category === "All" ? "" : ` (${galleryImages.filter(img => img.category === category).length})`}
+                {category === "All" ? "" : ` (${flattenedImages.filter(img => img.category === category).length})`}
               </button>
             ))}
           </div>
