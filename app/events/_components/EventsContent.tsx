@@ -12,41 +12,58 @@ export function EventsContent() {
   const categories = ["Upcoming", "Past", "All"];
 
   const events = [
-    {
-      id: 1,
-      title: "Hackathon 2024",
-      description: "Join us for a 24-hour coding challenge where you can build innovative solutions and compete for exciting prizes.",
-      date: "2024-04-15",
-      time: "09:00 AM",
-      location: "Tech Hub, Main Campus",
-      category: "Hackathon",
-      status: "Upcoming",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      id: 2,
-      title: "AI Workshop Series",
-      description: "Learn about the latest developments in AI and machine learning through hands-on workshops.",
-      date: "2024-04-20",
-      time: "02:00 PM",
-      location: "Virtual Event",
-      category: "Workshop",
-      status: "Upcoming",
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      id: 3,
-      title: "Web Development Bootcamp",
-      description: "Intensive 3-day bootcamp covering modern web development technologies and best practices.",
-      date: "2024-05-01",
-      time: "10:00 AM",
-      location: "Innovation Center",
-      category: "Workshop",
-      status: "Upcoming",
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-    }
-  ];
-
+  {
+    "id": 1,
+    "title": "Stellar Dev Yatra",
+    "description": "Event organized by TechSoc MSIT in collaboration with RiseIn and Stellar, featuring interactive sessions and exclusive merchandise.",
+    "date": "2024-07-13",
+    "time": "11:30 AM",
+    "location": "Microsoft Office, Gurugram",
+    "category": "Tech Event",
+    "status": "Completed",
+    "speakers": ["Ankit Raj", "Anuhya"],
+    "total_participants": 350,
+    "image": './stellar.JPG'
+  },
+  {
+    "id": 2,
+    "title": "NEO X Grind Hackathon: Rise In Edition",
+    "description": "24-hour hackathon with participants developing innovative applications on the NEO X platform, competing for a $10,000 prize pool.",
+    "date": "2024-09-27",
+    "time": "All Day",
+    "location": "Innov8 DLF Cyber Green Tower C, Gurugram",
+    "category": "Hackathon",
+    "status": "Completed",
+    "total_participants": 150,
+    "prize_pool": "$10,000",
+    "image": "./neox.JPG"
+  },
+  {
+    "id": 3,
+    "title": "Core Commit Global Meetups - Delhi",
+    "description": "Blockchain event featuring interactive sessions, workshops, and discussions about the Core Commit Program, networking opportunities for blockchain enthusiasts.",
+    "date": "2024-11-23",
+    "time": "11:30 AM",
+    "location": "Microsoft KP2 Office, Noida",
+    "category": "Tech Meetup",
+    "status": "Completed",
+    "total_participants": 150,
+    "image": "./coredao.JPG"
+  },
+  {
+    "id": 4,
+    "title": "EduChain Build Station Hackathon",
+    "description": "24-hour hackathon offering participants an opportunity to explore Web3 space, blockchain technology, and smart contracts. Highlighted project: NFTerna, a blockchain-based esports community platform.",
+    "date": "2024-12-28",
+    "time": "All Day",
+    "location": "Innov8 Coworking Aerocity, Delhi",
+    "category": "Hackathon",
+    "status": "Completed",
+    "total_participants": 140,
+    "highlighted_project": "NFTerna",
+    "image": "./educhain.JPG"
+  }
+];
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString), 'MMM dd, yyyy');
@@ -56,7 +73,7 @@ export function EventsContent() {
     }
   };
 
-  const filteredEvents = events.filter(event => 
+  const filteredEvents = events.filter(event =>
     activeFilter === "All" ? true : event.status === activeFilter
   );
 
@@ -66,7 +83,7 @@ export function EventsContent() {
         {/* Header and Filters */}
         <div className="relative top-16 bg-gray-950/80 backdrop-blur-md z-40 py-3 border-b border-gray-800">
           <h1 className="text-4xl font-bold mb-6">Events</h1>
-          
+
           <div className="flex flex-wrap gap-3 pb-2">
             {categories.map((category) => (
               <button
@@ -101,7 +118,7 @@ export function EventsContent() {
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors"
               >
                 <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-                
+
                 <div className=" p-6">
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Event Image */}
@@ -126,7 +143,7 @@ export function EventsContent() {
                       <h3 className="text-2xl font-bold mb-3">
                         {event.title}
                       </h3>
-                      
+
                       <p className="text-gray-400 mb-6">
                         {event.description}
                       </p>
@@ -165,4 +182,4 @@ export function EventsContent() {
       </main>
     </div>
   );
-} 
+}
